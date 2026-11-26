@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DurianCare | Chẩn đoán bệnh sầu riêng</title>
+  <link rel="icon" type="image/png" href="/static/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+  </head>
+<body>
+  {% include "auth.html" %}
+  <div id="app-shell" class="app-shell hidden">
+    {% include "sidebar.html" %}
+    <main class="main-area">
+            <header class="topbar">
+        <button class="mobile-menu" id="mobile-menu">☰</button>
+        <div><div class="breadcrumb">DurianCare <span>/</span> <b id="crumb" style="font-size: 12pt;">Tổng quan</b></div></div>
+        <div class="top-user"><div class="avatar" id="user-avatar">U</div><div><b id="user-name">Người dùng</b><small id="current-user-role">Thành viên</small></div></div>
+      </header>
+      {% include "pages/dashboard.html" %}
+      {% include "pages/diagnose.html" %}
+      {% include "pages/history.html" %}
+      {% include "pages/diseases.html" %}
+      {% include "pages/profile.html" %}
+      {% include "pages/stats.html" %}
+      {% include "pages/users.html" %}
+      {% include "pages/manage-diseases.html" %}
+      {% include "pages/treatments.html" %}
+      {% include "pages/models.html" %}
+    </main>
+  </div>
+  {% include "camera.html" %}
+  <div id="toast" class="toast"></div>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

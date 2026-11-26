@@ -1,0 +1,69 @@
+<section class="page" id="page-models">
+  <div class="page-heading">
+    <div>
+      <span class="eyebrow">AI MODEL MANAGEMENT</span>
+      <h1>Phiên bản mô hình AI</h1>
+      <p>Theo dõi phiên bản và chọn mô hình đang sử dụng.</p>
+    </div>
+  </div>
+  <div class="manage-grid">
+    <article class="panel">
+      <h3>Thêm phiên bản mô hình</h3>
+      <form id="model-form" class="form-grid">
+        <label>Tên mô hình
+          <select name="model_name" required>
+            <option value="EfficientNet-B2">EfficientNet-B2</option>
+            <option value="ResNet18">ResNet18</option>
+            <option value="VGG16">VGG16</option>
+          </select>
+        </label>
+        <label>Phiên bản<input name="version" placeholder="v1.1" required></label>
+        <label>Tệp mô hình (.pth hoặc .pt)
+          <input name="file" id="model-file" type="file" accept=".pth,.pt,application/octet-stream" required>
+          <small class="muted">Chỉ hỗ trợ trọng số PyTorch .pth/.pt. Tệp được lưu trực tiếp trên máy chủ.</small>
+        </label>
+        <label>Accuracy (0–1)<input name="accuracy" type="number" min="0" max="1" step="0.001" required></label>
+        <label>F1-Score (0–1)<input name="f1_score" type="number" min="0" max="1" step="0.001" required></label>
+        <button class="btn btn-primary" type="submit">Tiếp tục nhập dữ liệu huấn luyện →</button>
+      </form>
+      <div id="model-message" class="message"></div>
+    </article>
+    <article class="panel">
+      <h3>Các phiên bản đã đăng ký</h3>
+      <div id="model-list" class="admin-list"></div>
+    </article>
+  </div>
+</section>
+
+<!-- Pop-up bắt buộc nhập DuLieuHuanLuyen khi thêm model -->
+<div class="user-modal hidden" id="training-data-modal" role="dialog" aria-modal="true" aria-labelledby="td-modal-title">
+  <div class="user-modal-card">
+    <div class="user-modal-heading">
+      <div>
+        <span class="eyebrow">TRAINING DATASET (1–1)</span>
+        <h2 id="td-modal-title">Thêm dữ liệu huấn luyện</h2>
+      </div>
+      <button class="modal-close" id="close-td-modal" type="button" aria-label="Đóng">×</button>
+    </div>
+    <p class="muted" style="margin:0 0 12px">Bắt buộc khai báo thông tin bộ dữ liệu huấn luyện trước khi lưu phiên bản mô hình.</p>
+    <form id="training-data-form" class="form-grid">
+      <label for="td-file-format">Định dạng dữ liệu (tối đa 10 ký tự)</label>
+      <input id="td-file-format" name="file_format" type="text" maxlength="10" placeholder="VD: JPG, PNG, ZIP" required>
+
+      <label for="td-file-size">Dung lượng dữ liệu (bytes)</label>
+      <input id="td-file-size" name="file_size" type="number" min="0" step="1" placeholder="VD: 524288000">
+
+      <label for="td-source">Nguồn dữ liệu</label>
+      <input id="td-source" name="source" type="text" maxlength="255" placeholder="VD: Mendeley Vĩnh Long / Kaggle">
+
+      <label for="td-description">Mô tả bộ dữ liệu</label>
+      <textarea id="td-description" name="description" rows="3" maxlength="255" placeholder="Số lượng ảnh, số lớp bệnh, ghi chú tiền xử lý..."></textarea>
+
+      <div class="user-modal-actions">
+        <button class="btn btn-outline" id="cancel-td-modal" type="button">Hủy</button>
+        <button class="btn btn-primary" id="save-td-btn" type="submit">Xác nhận tải lên & lưu</button>
+      </div>
+      <p class="message" id="td-form-message"></p>
+    </form>
+  </div>
+</div>

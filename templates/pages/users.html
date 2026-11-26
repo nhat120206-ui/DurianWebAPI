@@ -1,0 +1,22 @@
+<section class="page" id="page-users">
+  <div class="page-heading">
+    <div><span class="eyebrow">ADMINISTRATION</span><h1>Quản lý người dùng</h1><p>Theo dõi tài khoản và trạng thái truy cập.</p></div>
+    <button class="btn btn-primary" id="add-user-btn" type="button">＋ Thêm mới</button>
+  </div>
+  <article class="panel"><div class="table-wrap"><table><thead><tr><th>Người dùng</th><th>Email</th><th>Vai trò</th><th>Ngày tạo</th><th>Trạng thái</th><th>Thao tác</th></tr></thead><tbody id="users-body"></tbody></table></div></article>
+</section>
+
+<div class="user-modal hidden" id="user-modal" role="dialog" aria-modal="true" aria-labelledby="user-modal-title">
+  <div class="user-modal-card">
+    <div class="user-modal-heading"><div><span class="eyebrow">USER MANAGEMENT</span><h2 id="user-modal-title">Thêm người dùng</h2></div><button class="modal-close" id="close-user-modal" type="button" aria-label="Đóng">×</button></div>
+    <form id="user-form" class="form-grid">
+      <input type="hidden" name="user_id" id="edit-user-id">
+      <label for="user-full-name">Họ và tên</label><input id="user-full-name" name="full_name" type="text" maxlength="100" placeholder="Nhập họ và tên" required>
+      <label for="user-email">Email</label><input id="user-email" name="email" type="email" maxlength="255" placeholder="name@example.com" required>
+      <label for="user-role">Vai trò</label><select id="user-role" name="role" required><option value="User">User</option><option value="Admin">Admin</option></select>
+      <label for="user-password">Mật khẩu <span id="password-hint">(bắt buộc khi thêm mới)</span></label><input id="user-password" name="password" type="password" minlength="6" autocomplete="new-password" placeholder="Ít nhất 6 ký tự">
+      <div class="user-modal-actions"><button class="btn btn-outline" id="cancel-user-modal" type="button">Hủy</button><button class="btn btn-primary" id="save-user-btn" type="submit">Thêm người dùng</button></div>
+      <p class="message" id="user-form-message"></p>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<section class="page" id="page-diagnose">
+        <div class="page-heading"><div><span class="eyebrow">AI IMAGE ANALYSIS</span><h1>Chẩn đoán bệnh</h1><p>Tải lên hình ảnh lá sầu riêng rõ nét để hệ thống phân tích.</p></div></div>
+        <div class="diagnose-layout">
+          <article class="panel upload-panel">
+            <div class="panel-heading"><div><h3>① Tải ảnh lên</h3><p class="muted">Chọn ảnh từ thiết bị hoặc chụp bằng camera.</p></div></div>
+            <div class="dropzone" id="dropzone"><input id="image-input" type="file" accept="image/png,image/jpeg,image/webp" hidden><div class="upload-symbol">↑</div><b>Kéo thả hình ảnh vào đây</b><span>hoặc</span><div class="upload-actions"><button type="button" class="btn btn-outline" id="choose-image">Chọn hình ảnh</button><button type="button" class="btn btn-ghost" id="open-camera">◎ Chụp ảnh</button></div><small>Hỗ trợ JPG, PNG, WEBP</small></div>
+            <div class="preview-wrap hidden" id="preview-wrap"><img id="image-preview" alt="Ảnh đã chọn"><div><b id="file-name"></b><small id="file-size"></small><button class="text-btn danger-text" id="remove-image">Xóa ảnh</button></div></div>
+            <div class="upload-tips"><b>Để có kết quả tốt hơn</b><ul><li>Chụp rõ vùng lá có dấu hiệu bất thường.</li><li>Ưu tiên ánh sáng tự nhiên, tránh ảnh bị mờ.</li><li>Chỉ tải ảnh cây sầu riêng.</li></ul></div>
+            <button class="btn btn-primary btn-wide" id="run-diagnosis" disabled>Phân tích bằng AI <span>→</span></button>
+            <div id="diagnose-message" class="message"></div>
+          </article>
+          <article class="panel result-panel"><div class="panel-heading"><div><h3>② Kết quả chẩn đoán</h3><p class="muted">Kết quả phân tích sẽ hiển thị tại đây.</p></div><span class="ai-badge">✦ AI POWERED</span></div><div id="diagnosis-result" class="result-placeholder"><div class="result-graphic">❧</div><b>Chờ hình ảnh phân tích</b><p>Vui lòng tải ảnh lên và nhấn “Phân tích bằng AI”.</p></div></article>
+        </div>
+      </section>

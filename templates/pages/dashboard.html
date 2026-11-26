@@ -1,0 +1,20 @@
+<section class="page active" id="page-dashboard">
+        <div class="welcome-banner">
+          <div><span class="eyebrow light">DURIANCE · AI ASSISTANT</span><h1>Xin chào, <span id="welcome-name">bạn</span>! <span class="wave">✦</span></h1><p>Chủ động chăm sóc vườn sầu riêng khỏe mạnh mỗi ngày.</p><button class="btn btn-white" data-page="diagnose">Bắt đầu chẩn đoán <span>→</span></button></div>
+          <div class="banner-illustration"><div class="sun"></div><div class="plant">❧</div><div class="banner-orbit"></div></div>
+        </div>
+        <div class="section-heading"><div><span class="eyebrow">TỔNG QUAN</span><h2>Hoạt động của bạn</h2></div><span class="date-chip" id="today-label"></span></div>
+        <div class="stats-grid">
+          <article class="stat-card"><div class="stat-icon green">⌕</div><div><span>Tổng lượt chẩn đoán</span><strong id="stat-total">—</strong><small>Trong lịch sử của bạn</small></div></article>
+          <article class="stat-card"><div class="stat-icon amber">◷</div><div><span>Lần gần nhất</span><strong id="stat-last">—</strong><small id="stat-last-date">Chưa có dữ liệu</small></div></article>
+          <article class="stat-card"><div class="stat-icon blue">❀</div><div><span>Bệnh trong thư viện</span><strong id="stat-diseases">—</strong><small>Danh mục tra cứu</small></div></article>
+        </div>
+        <div class="content-grid">
+          <article class="panel quick-panel"><div class="panel-heading"><div><span class="eyebrow">BẮT ĐẦU NHANH</span><h3>Bạn muốn làm gì hôm nay?</h3></div></div><div class="quick-actions">
+            <button class="quick-action" data-page="diagnose"><span class="quick-icon">⌕</span><b>Chẩn đoán bệnh</b><small>Tải ảnh lá sầu riêng để AI phân tích</small><i>→</i></button>
+            <button class="quick-action" data-page="history"><span class="quick-icon">◷</span><b>Xem lịch sử</b><small>Theo dõi các lần chẩn đoán trước</small><i>→</i></button>
+            <button class="quick-action" data-page="diseases"><span class="quick-icon">❀</span><b>Tra cứu bệnh</b><small>Tìm hiểu triệu chứng và cách xử lý</small><i>→</i></button>
+          </div></article>
+          <article class="panel recent-panel"><div class="panel-heading"><div><span class="eyebrow">HOẠT ĐỘNG MỚI</span><h3>Lịch sử gần đây</h3></div><button class="link-btn" data-page="history">Xem tất cả →</button></div><div id="recent-list" class="recent-list"><div class="empty-state">Chưa có lần chẩn đoán nào.</div></div></article>
+        </div>
+      </section>

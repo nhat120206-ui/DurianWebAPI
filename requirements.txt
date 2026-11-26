@@ -1,0 +1,19 @@
+# Deep Learning & Xu ly anh (Cai dat PyTorch CUDA 11.8/12.1 truoc cho GTX 1070)
+torch>=2.0.0
+torchvision>=0.15.0
+numpy>=1.24.0
+Pillow>=10.0.0
+opencv-python>=4.8.0
+scikit-learn>=1.3.0
+matplotlib>=3.7.0
+
+# Web Framework & Ket noi SQL Server (khop ERD Nhom_02)
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+python-multipart>=0.0.9
+jinja2>=3.1.3
+pyodbc>=5.1.0
+sqlalchemy>=2.0.28
+passlib[bcrypt]>=1.7.4
+bcrypt==4.0.1
+python-jose[cryptography]>=3.3.0
